@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arunkumar | Information Technology Student &amp; Aspiring AI Developer</title>
+<meta name="description" content="Portfolio of Arunkumar, an Information Technology student and aspiring AI developer interested in Python, machine learning, computer vision, and practical AI solutions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arunkumar | Information Technology Student & Aspiring AI Developer">
+<meta property="og:description" content="Portfolio of Arunkumar, an IT student and aspiring AI developer interested in Python, machine learning, and computer vision.">
+<meta name="theme-color" content="#070b16">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' fill='%234c8dff' text-anchor='middle'%3EAK%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#070b16;--bg2:#0b1224;--card:rgba(255,255,255,.04);--border:rgba(255,255,255,.09);
+  --text:#eaf0ff;--muted:#9aa8c7;--blue:#3b82f6;--violet:#8b5cf6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden;
+  background-image:radial-gradient(900px 500px at 85% -5%,rgba(59,130,246,.16),transparent 60%),radial-gradient(700px 500px at 0% 30%,rgba(139,92,246,.12),transparent 60%),
+  linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:auto,auto,48px 48px,48px 48px;background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
+.container{width:min(1120px,92%);margin:auto}
+section{padding:90px 0}
+h2.title{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:10px;letter-spacing:-.02em}
+.sub{color:var(--muted);max-width:640px;margin-bottom:40px}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;font-weight:600}
+.glass{background:var(--card);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .25s,border-color .25s,box-shadow .25s}
+.glass:hover{transform:translateY(-4px);border-color:rgba(59,130,246,.45);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;font-size:.95rem;border:1px solid var(--border);cursor:pointer;min-height:44px;font-family:inherit;color:var(--text);background:transparent;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--blue),var(--violet));border:none;color:#fff;box-shadow:0 8px 24px rgba(59,130,246,.3)}
+.btn.small{padding:8px 14px;font-size:.85rem;min-height:38px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(7,11,22,.75);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.logo span{background:linear-gradient(135deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:26px;align-items:center;list-style:none}
+.links a{color:var(--muted);font-size:.92rem;transition:color .2s}
+.links a:hover{color:var(--text)}
+.burger{display:none;background:none;border:1px solid var(--border);border-radius:10px;width:44px;height:44px;color:var(--text);cursor:pointer;font-size:1.3rem}
+.nav-cta{display:inline-flex}
+
+/* HERO */
+#home{padding:70px 0 90px;position:relative}
+#particles{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative;z-index:1}
+.status{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;border:1px solid var(--border);background:var(--card);font-size:.82rem;color:var(--muted);margin-bottom:20px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.4}}
+.hello{font-size:1.15rem;color:var(--muted);margin-bottom:6px}
+h1{font-size:clamp(2.2rem,5.6vw,3.8rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
+h1 .grad{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.typing{color:var(--blue);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:1rem;min-height:1.6em;margin-bottom:14px}
+.typing::after{content:"▍";animation:blink 1s steps(1) infinite;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);max-width:540px;margin-bottom:28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.editor{border-radius:16px;overflow:hidden;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem}
+.editor .bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--border);align-items:center}
+.editor .bar i{width:11px;height:11px;border-radius:50%;display:block}
+.editor .bar span{margin-left:10px;color:var(--muted);font-size:.75rem}
+.editor pre{padding:18px;overflow-x:auto;line-height:1.7;color:#cbd5f5}
+.k{color:#c4a1ff}.f{color:#60a5fa}.s{color:#86efac}.c{color:#64748b}
+.detect{position:relative;margin:0 18px 18px;height:120px;border-radius:10px;border:1px dashed rgba(255,255,255,.12);background:rgba(255,255,255,.02)}
+.box{position:absolute;border:2px solid var(--blue);border-radius:6px;font-size:.65rem;padding:1px 6px;color:#fff;background:rgba(59,130,246,.25);animation:float 5s ease-in-out infinite}
+.box.b2{border-color:var(--violet);background:rgba(139,92,246,.25);animation-delay:1.5s}
+@keyframes float{50%{transform:translateY(-6px)}}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.4fr .8fr;gap:30px}
+.about p{color:var(--muted);margin-bottom:16px}
+.focus{padding:26px;align-self:start}
+.focus h3{margin-bottom:14px;font-size:1.05rem}
+.focus li{list-style:none;padding:9px 0;border-bottom:1px solid var(--border);color:var(--muted);font-size:.93rem}
+.focus li:last-child{border:none}
+.focus li::before{content:"▸ ";color:var(--blue)}
+
+/* SKILLS */
+.skill-group{margin-bottom:34px}
+.skill-group h3{margin-bottom:16px;font-size:1.1rem;color:var(--blue)}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{padding:22px}
+.icon{font-size:1.5rem;margin-bottom:10px;display:block}
+.card h4{margin-bottom:6px;font-size:1.02rem}
+.card p{color:var(--muted);font-size:.9rem}
+
+/* PROJECTS */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.filters button{padding:8px 18px;border-radius:99px;border:1px solid var(--border);background:var(--card);color:var(--muted);cursor:pointer;font-family:inherit;font-size:.88rem;min-height:40px}
+.filters button.active{background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;border-color:transparent}
+.proj{overflow:hidden;cursor:pointer;display:flex;flex-direction:column}
+.thumb{height:160px;background:linear-gradient(135deg,rgba(59,130,246,.3),rgba(139,92,246,.3));display:flex;align-items:center;justify-content:center;font-size:2.6rem;position:relative}
+.ph{position:absolute;top:10px;right:10px;font-size:.68rem;background:rgba(0,0,0,.5);padding:3px 8px;border-radius:6px;color:#fbbf24;border:1px solid rgba(251,191,36,.4)}
+.proj .body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:.72rem;padding:4px 10px;border-radius:99px;background:rgba(59,130,246,.12);color:#93c5fd;border:1px solid rgba(59,130,246,.25)}
+.actions{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+.hidden{display:none!important}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.sheet{background:var(--bg2);border:1px solid var(--border);border-radius:18px;width:min(760px,100%);max-height:88vh;overflow-y:auto;padding:30px;position:relative}
+.sheet h3{font-size:1.5rem;margin-bottom:6px}
+.sheet h4{margin:20px 0 6px;color:var(--blue);font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
+.sheet p,.sheet li{color:var(--muted);font-size:.93rem}
+.sheet ul{padding-left:20px}
+.close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;font-size:1.1rem}
+
+/* TIMELINES */
+.tl{position:relative;padding-left:34px;max-width:720px}
+.tl::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--blue),var(--violet))}
+.node{position:relative;margin-bottom:22px}
+.node::before{content:"";position:absolute;left:-31px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--blue);box-shadow:0 0 12px rgba(59,130,246,.6)}
+.node.goal::before{border-color:var(--violet);box-shadow:0 0 12px rgba(139,92,246,.7)}
+.node h4{margin-bottom:4px}
+.badge{display:inline-block;font-size:.75rem;padding:3px 10px;border-radius:99px;background:rgba(34,197,94,.12);color:#86efac;border:1px solid rgba(34,197,94,.3);margin:6px 0}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+form{padding:26px;display:flex;flex-direction:column;gap:14px}
+label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:5px}
+input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);font-family:inherit;font-size:.95rem}
+textarea{min-height:130px;resize:vertical}
+.info{display:flex;flex-direction:column;gap:14px}
+.info a,.info div.item{padding:18px 20px;display:block}
+.info small{color:var(--muted);display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+#formMsg{font-size:.88rem;min-height:1.2em}
+
+footer{border-top:1px solid var(--border);padding:40px 0;text-align:center;color:var(--muted);font-size:.9rem}
+footer .logo{display:block;margin-bottom:6px;color:var(--text)}
+footer .flinks{display:flex;gap:20px;justify-content:center;margin:14px 0}
+footer .flinks a:hover{color:var(--text)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about,.contact{grid-template-columns:1fr}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .burger{display:block}
+  .nav-cta{display:none}
+  .links{position:absolute;top:68px;left:0;right:0;flex-direction:column;background:rgba(7,11,22,.97);padding:18px 4%;gap:6px;border-bottom:1px solid var(--border);display:none;align-items:stretch}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 4px;font-size:1rem}
+  section{padding:64px 0}
+}
+@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Main navigation">
+    <a href="#home" class="logo" aria-label="Arunkumar home"><span>AK</span></a>
+    <ul class="links" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#journey">Learning Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="btn primary small resume-btn">Download Resume</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="container hero">
+    <div>
+      <div class="status"><span class="dot"></span> Open to Learning &amp; Opportunities</div>
+      <p class="hello">Hi, I'm Arunkumar 👋</p>
+      <h1>Information Technology Student <span class="grad">&amp; Aspiring AI Developer</span></h1>
+      <div class="typing" id="typing" aria-live="off"></div>
+      <p class="lead">I'm passionate about Python, Machine Learning, Computer Vision, and building practical technology solutions. I learn by building and continuously explore new technologies to turn ideas into real-world applications.</p>
+      <div class="cta">
+        <a href="#projects" class="btn primary">View My Projects</a>
+        <a href="#contact" class="btn">Let's Connect</a>
+      </div>
+    </div>
+    <div class="glass editor" role="img" aria-label="Decorative code editor showing a Python object detection snippet">
+      <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>detect.py</span></div>
+<pre><span class="k">from</span> ultralytics <span class="k">import</span> YOLO
+<span class="c"># load a pretrained model</span>
+model = <span class="f">YOLO</span>(<span class="s">"yolov8n.pt"</span>)
+results = model.<span class="f">predict</span>(<span class="s">"image.jpg"</span>)
+<span class="k">for</span> r <span class="k">in</span> results:
+    <span class="f">print</span>(r.boxes)</pre>
+      <div class="detect" aria-hidden="true">
+        <div class="box" style="left:8%;top:22%;width:34%;height:55%">object</div>
+        <div class="box b2" style="left:52%;top:30%;width:36%;height:50%">object</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container reveal">
+    <span class="tag">Who I am</span>
+    <h2 class="title">About Me</h2>
+    <div class="about">
+      <div>
+        <p>I am an Information Technology student currently pursuing a Bachelor of Commerce in Information Technology at KPR College of Arts, Science and Research. I am interested in software development, programming, machine learning, and computer vision.</p>
+        <p>I believe the best way to learn technology is by building practical projects. I have been exploring Python, data preprocessing, machine learning concepts, object detection, and YOLO-based computer vision applications.</p>
+        <p>My goal is to strengthen my technical foundation, gain practical industry experience, collaborate with developers, and eventually build intelligent AI-powered solutions that solve real-world problems.</p>
+      </div>
+      <aside class="glass focus">
+        <h3>Current Focus</h3>
+        <ul><li>Python</li><li>Machine Learning</li><li>Computer Vision</li><li>Object Detection</li><li>AI Development</li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container reveal">
+    <span class="tag">What I work with</span>
+    <h2 class="title">Skills</h2>
+    <p class="sub">Technologies I am learning and using in my projects.</p>
+    <div id="skillsRoot"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container reveal">
+    <span class="tag">What I build</span>
+    <h2 class="title">Projects</h2>
+    <p class="sub">Learning by building. Project cards below are placeholders until real project details are added.</p>
+    <div class="filters" role="tablist" aria-label="Project filters" id="filters"></div>
+    <div class="grid g3" id="projGrid"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container reveal">
+    <span class="tag">Background</span>
+    <h2 class="title">Education</h2>
+    <div class="tl">
+      <div class="node glass card">
+        <h4>Bachelor of Commerce in Information Technology</h4>
+        <p>KPR College of Arts, Science and Research</p>
+        <span class="badge">Currently Pursuing</span>
+        <p><strong>Field of study:</strong> Information Technology</p>
+        <p><strong>Technical interests:</strong> Python, Machine Learning, Computer Vision, Object Detection</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="container reveal">
+    <span class="tag">Path so far</span>
+    <h2 class="title">My Learning Journey</h2>
+    <div class="tl" id="journeyRoot"></div>
+  </div>
+</section>
+
+<!-- EXPLORING -->
+<section id="exploring">
+  <div class="container reveal">
+    <span class="tag">Right now</span>
+    <h2 class="title">What I'm Currently Exploring</h2>
+    <div class="grid g3" id="exploreRoot" style="margin-top:30px"></div>
+  </div>
+</section>
+
+<!-- GOALS -->
+<section id="goals">
+  <div class="container reveal">
+    <span class="tag">Career goals</span>
+    <h2 class="title">Where I'm Heading</h2>
+    <p class="sub">My long-term goal is to become a skilled AI/ML developer who can combine software development, machine learning, and computer vision to create useful real-world applications.</p>
+    <div class="grid g3">
+      <div class="glass card"><span class="icon">📚</span><h4>Learn</h4><p>Continuously improve my knowledge of AI, ML, programming, and software development.</p></div>
+      <div class="glass card"><span class="icon">🛠️</span><h4>Build</h4><p>Create practical projects that demonstrate real technical skills.</p></div>
+      <div class="glass card"><span class="icon">🌱</span><h4>Grow</h4><p>Gain internship and industry experience while learning from experienced developers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPER -->
+<section id="developer">
+  <div class="container reveal">
+    <span class="tag">Developer</span>
+    <h2 class="title">Build. Learn. Improve.</h2>
+    <div class="grid g3" style="margin-top:30px">
+      <a class="glass card" data-link="github" target="_blank" rel="noopener"><span class="icon">🐙</span><h4>GitHub</h4><p class="lnk"></p></a>
+      <a class="glass card" data-link="linkedin" target="_blank" rel="noopener"><span class="icon">💼</span><h4>LinkedIn</h4><p class="lnk"></p></a>
+      <a class="glass card" data-link="email"><span class="icon">✉️</span><h4>Email</h4><p class="lnk"></p></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container reveal">
+    <span class="tag">Contact</span>
+    <h2 class="title">Let's Build Something Together</h2>
+    <p class="sub">I'm always interested in learning, collaborating, discussing technology, and exploring opportunities in AI and software development.</p>
+    <div class="contact">
+      <form class="glass" id="form" novalidate>
+        <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div><label for="subject">Subject</label><input id="subject" name="subject" required></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+        <button class="btn primary" type="submit">Send Message</button>
+        <div id="formMsg" role="status"></div>
+      </form>
+      <div class="info">
+        <a class="glass" data-link="email"><small>Email</small><span class="lnk"></span></a>
+        <a class="glass" data-link="github" target="_blank" rel="noopener"><small>GitHub</small><span class="lnk"></span></a>
+        <a class="glass" data-link="linkedin" target="_blank" rel="noopener"><small>LinkedIn</small><span class="lnk"></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <span class="logo">Arunkumar</span>
+    <p>Information Technology Student &amp; Aspiring AI Developer</p>
+    <div class="flinks">
+      <a data-link="github" target="_blank" rel="noopener">GitHub</a>
+      <a data-link="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-link="email">Email</a>
+    </div>
+    <p>© 2026 Arunkumar. Built with passion, code, and curiosity.</p>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+/* ============ EDIT THIS SECTION ============
+   Replace each "[ADD ...]" value with your real info.
+   Leave a value as "[ADD ...]" and it shows as a visible placeholder. */
+const CONFIG = {
+  github:   "[ADD GITHUB URL]",     // e.g. https://github.com/yourname
+  linkedin: "[ADD LINKEDIN URL]",   // e.g. https://www.linkedin.com/in/yourname
+  email:    "[ADD EMAIL]",          // e.g. you@example.com
+  resume:   "",                     // e.g. "resume.pdf" (upload the file next to index.html)
+  formspree:""                      // optional: https://formspree.io/f/xxxxxxx
+};
+
+const SKILLS = [
+  {group:"Programming", items:[
+    {i:"🐍",n:"Python",d:"My primary programming language for AI, automation, data processing, and machine learning projects."},
+    {i:"⚙️",n:"C++",d:"Used to learn programming fundamentals and object-oriented concepts."},
+    {i:"🔧",n:"C",d:"Building a foundation in core programming logic and problem-solving."},
+    {i:"🗄️",n:"SQL",d:"Learning to query and manage data in relational databases."}]},
+  {group:"AI & Machine Learning", items:[
+    {i:"🤖",n:"Machine Learning",d:"Learning fundamental ML concepts, model training, and evaluation."},
+    {i:"🧹",n:"Data Preprocessing",d:"Understanding data cleaning, transformation, and preparation for ML models."},
+    {i:"👁️",n:"Computer Vision",d:"Exploring image processing, object detection, and real-world visual AI applications."},
+    {i:"🎯",n:"Object Detection",d:"Working with detection concepts, bounding boxes, and model inference."},
+    {i:"⚡",n:"YOLO",d:"Learning YOLO-based object detection and real-time computer vision."},
+    {i:"📏",n:"Model Evaluation",d:"Understanding how to measure and compare model performance."}]},
+  {group:"Tools & Technologies", items:[
+    {i:"🌿",n:"Git",d:"Version control for tracking changes in my projects."},
+    {i:"🐙",n:"GitHub",d:"Hosting code and learning collaborative development workflows."},
+    {i:"📓",n:"Jupyter Notebook",d:"Experimenting with data and ML code interactively."},
+    {i:"💻",n:"VS Code",d:"My everyday code editor for development."}]}
+];
+
+const PROJECTS = [
+  {id:"yolo",title:"YOLO Object Detection Project",emoji:"🎯",cats:["AI/ML","Computer Vision","Python"],
+   desc:"A computer vision project exploring real-time object detection using YOLO. The project focuses on understanding object detection workflows, model inference, image processing, and practical computer vision applications.",
+   tech:["Python","YOLO","Computer Vision","OpenCV"],
+   github:"[ADD GITHUB LINK]", demo:"", placeholder:true,
+   details:{
+     overview:"[ADD PROJECT DETAILS]", problem:"[ADD PROJECT DETAILS]", objective:"Understand object detection workflows and practical YOLO-based computer vision.",
+     how:"[ADD PROJECT DETAILS]", features:["[ADD PROJECT DETAILS]"], challenges:"[ADD PROJECT DETAILS]",
+     learned:"[ADD PROJECT DETAILS]", future:"[ADD PROJECT DETAILS]"}}
+];
+
+const JOURNEY = [
+  ["Programming","Learning strong programming fundamentals and problem-solving."],
+  ["Python","Using Python for programming, automation, data processing, and AI."],
+  ["Data","Exploring data preprocessing and understanding how data affects machine learning."],
+  ["Machine Learning","Learning fundamental ML concepts, model training, and evaluation."],
+  ["Computer Vision","Exploring image processing and visual AI."],
+  ["Object Detection","Working with object detection concepts and YOLO-based projects."],
+  ["AI Development","Goal: Build practical AI-powered applications that solve real-world problems.",true]
+];
+
+const EXPLORING = [
+  ["🤖","Machine Learning","Understanding ML fundamentals and practical workflows."],
+  ["👁️","Computer Vision","Exploring image processing and object detection."],
+  ["🐍","Python","Improving Python programming and problem-solving skills."],
+  ["🎯","YOLO","Learning YOLO-based object detection and real-time computer vision."],
+  ["📊","Data Preprocessing","Understanding data cleaning, transformation, and preparation for ML models."],
+  ["💡","AI Projects","Building practical projects to strengthen real-world development skills."]
+];
+/* ============ END EDIT SECTION ============ */
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const isPH=v=>!v||/^\[ADD/.test(v);
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* Menu */
+const burger=$("#burger"),menu=$("#menu");
+burger.onclick=()=>{const o=menu.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.textContent=o?"✕":"☰"};
+$$("#menu a").forEach(a=>a.addEventListener("click",()=>{menu.classList.remove("open");burger.textContent="☰";burger.setAttribute("aria-expanded",false)}));
+
+/* Resume */
+$$(".resume-btn").forEach(b=>{
+  if(!isPH(CONFIG.resume)){b.href=CONFIG.resume;b.setAttribute("download","")}
+  else b.addEventListener("click",e=>{e.preventDefault();alert("Resume not added yet. Put resume.pdf next to index.html and set CONFIG.resume.")});
+});
+
+/* Contact links */
+$$("[data-link]").forEach(el=>{
+  const k=el.dataset.link,v=CONFIG[k],ph=isPH(v);
+  const txt=el.querySelector(".lnk");
+  if(txt) txt.textContent=ph?v||"[ADD "+k.toUpperCase()+"]":v.replace(/^https?:\/\//,"").replace(/^mailto:/,"");
+  if(ph){el.removeAttribute("href");el.style.opacity=".75"; if(!txt) el.textContent=el.textContent+" (not added)";}
+  else el.href=k==="email"?"mailto:"+v:v;
+});
+
+/* Skills */
+$("#skillsRoot").innerHTML=SKILLS.map(g=>`<div class="skill-group"><h3>${g.group}</h3><div class="grid g4">${g.items.map(s=>`<div class="glass card"><span class="icon" aria-hidden="true">${s.i}</span><h4>${s.n}</h4><p>${s.d}</p></div>`).join("")}</div></div>`).join("");
+
+/* Journey / Exploring */
+$("#journeyRoot").innerHTML=JOURNEY.map(j=>`<div class="node glass card${j[2]?" goal":""}"><h4>${j[0]}</h4><p>${j[1]}</p></div>`).join("");
+$("#exploreRoot").innerHTML=EXPLORING.map(e=>`<div class="glass card"><span class="icon" aria-hidden="true">${e[0]}</span><h4>${e[1]}</h4><p>${e[2]}</p></div>`).join("");
+
+/* Projects */
+const CATS=["All","AI/ML","Computer Vision","Python","Other"];
+$("#filters").innerHTML=CATS.map((c,i)=>`<button role="tab" class="${i?"":"active"}" data-c="${c}">${c}</button>`).join("");
+function renderProjects(cat="All"){
+  const list=PROJECTS.filter(p=>cat==="All"||p.cats.includes(cat));
+  $("#projGrid").innerHTML=list.length?list.map(p=>`
+  <article class="glass proj" data-id="${p.id}" tabindex="0" aria-label="${esc(p.title)} details">
+    <div class="thumb" aria-hidden="true">${p.emoji}${p.placeholder?'<span class="ph">Placeholder</span>':""}</div>
+    <div class="body"><h4>${p.title}</h4><p style="color:var(--muted);font-size:.9rem">${p.desc}</p>
+      <div class="chips">${p.tech.map(t=>`<span>${t}</span>`).join("")}</div>
+      <div class="actions">
+        ${isPH(p.github)?`<span class="btn small" style="opacity:.6">${p.github||"[ADD GITHUB LINK]"}</span>`:`<a class="btn small" href="${p.github}" target="_blank" rel="noopener">View on GitHub</a>`}
+        ${p.demo&&!isPH(p.demo)?`<a class="btn primary small" href="${p.demo}" target="_blank" rel="noopener">Live Demo</a>`:""}
+      </div></div></article>`).join(""):`<p style="color:var(--muted)">No projects in this category yet.</p>`;
+}
+renderProjects();
+$("#filters").onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("#filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProjects(b.dataset.c)};
+
+/* Modal */
+const modal=$("#modal"),sheet=$("#sheet");
+function openProject(id){
+  const p=PROJECTS.find(x=>x.id===id),d=p.details;
+  sheet.innerHTML=`<button class="close" aria-label="Close">✕</button><h3 id="mTitle">${p.title}</h3>
+  <div class="chips">${p.tech.map(t=>`<span>${t}</span>`).join("")}</div>
+  <h4>Overview</h4><p>${d.overview}</p><h4>Problem Statement</h4><p>${d.problem}</p><h4>Objective</h4><p>${d.objective}</p>
+  <h4>How It Works</h4><p>${d.how}</p><h4>Key Features</h4><ul>${d.features.map(f=>`<li>${f}</li>`).join("")}</ul>
+  <h4>Challenges</h4><p>${d.challenges}</p><h4>What I Learned</h4><p>${d.learned}</p><h4>Future Improvements</h4><p>${d.future}</p>
+  <h4>Links</h4><p>GitHub: ${isPH(p.github)?p.github:`<a href="${p.github}" target="_blank" rel="noopener" style="color:var(--blue)">${p.github}</a>`}<br>Demo: ${p.demo&&!isPH(p.demo)?`<a href="${p.demo}" target="_blank" rel="noopener" style="color:var(--blue)">${p.demo}</a>`:"Not available"}</p>`;
+  modal.classList.add("open");document.body.style.overflow="hidden";$(".close",sheet).focus();
+}
+function closeModal(){modal.classList.remove("open");document.body.style.overflow=""}
+$("#projGrid").addEventListener("click",e=>{if(e.target.closest("a"))return;const c=e.target.closest(".proj");if(c)openProject(c.dataset.id)});
+$("#projGrid").addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest(".proj");if(c)openProject(c.dataset.id)}});
+modal.addEventListener("click",e=>{if(e.target===modal||e.target.closest(".close"))closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+
+/* Typing */
+const phrases=["Learning by building.","Python • Machine Learning • Computer Vision","Exploring YOLO & object detection."];
+const tEl=$("#typing");
+if(reduce){tEl.textContent=phrases[0]}else{
+  let pi=0,ci=0,del=false;
+  (function tick(){
+    const w=phrases[pi];
+    tEl.textContent=w.slice(0,ci);
+    if(!del&&ci<w.length){ci++;setTimeout(tick,70)}
+    else if(!del){del=true;setTimeout(tick,1500)}
+    else if(ci>0){ci--;setTimeout(tick,35)}
+    else{del=false;pi=(pi+1)%phrases.length;setTimeout(tick,400)}
+  })();
+}
+
+/* Scroll reveal */
+if("IntersectionObserver" in window&&!reduce){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+  $$(".reveal").forEach(el=>io.observe(el));
+}else $$(".reveal").forEach(el=>el.classList.add("in"));
+
+/* Particles (light) */
+(function(){
+  if(reduce)return;
+  const cv=$("#particles"),ctx=cv.getContext("2d");let W,H,pts=[],raf;
+  function size(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;pts=Array.from({length:Math.min(40,Math.floor(W/30))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    pts.forEach((p,i)=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      ctx.fillStyle="rgba(96,165,250,.7)";ctx.beginPath();ctx.arc(p.x,p.y,1.8,0,6.283);ctx.fill();
+      for(let j=i+1;j<pts.length;j++){const q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+        if(d<120){ctx.strokeStyle=`rgba(139,92,246,${.18*(1-d/120)})`;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}});
+    raf=requestAnimationFrame(draw);
+  }
+  size();draw();addEventListener("resize",size);
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)cancelAnimationFrame(raf);else draw()});
+})();
+
+/* Contact form */
+$("#form").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const f=e.target,msg=$("#formMsg");
+  if(!f.checkValidity()){msg.textContent="Please fill in all fields with a valid email.";msg.style.color="#fca5a5";return}
+  const data=Object.fromEntries(new FormData(f));
+  if(CONFIG.formspree&&!isPH(CONFIG.formspree)){
+    try{
+      const r=await fetch(CONFIG.formspree,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(data)});
+      if(r.ok){msg.textContent="Thanks! Your message was sent.";msg.style.color="#86efac";f.reset();return}
+      throw 0;
+    }catch{msg.textContent="Could not send. Please email me directly.";msg.style.color="#fca5a5";return}
+  }
+  if(!isPH(CONFIG.email)){
+    location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.message+"\n\nFrom: "+data.name+" ("+data.email+")")}`;
+    msg.textContent="Opening your email app…";msg.style.color="#86efac";
+  }else{
+    msg.textContent="Contact form not connected yet. Add an email or Formspree URL in the CONFIG.";msg.style.color="#fbbf24";
+  }
+});
+</script>
+</body>
+</html>
